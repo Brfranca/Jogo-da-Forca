@@ -50,13 +50,16 @@ namespace HangmanGame.Logics
 
         public void ImageVector()
         {
-            Images[0] = Directory.GetCurrentDirectory() + @"/images/startGame.PNG";
-            Images[1] = Directory.GetCurrentDirectory() + @"/images/error1.PNG";
-            Images[2] = Directory.GetCurrentDirectory() + @"/images/error2.PNG";
-            Images[3] = Directory.GetCurrentDirectory() + @"/images/error3.PNG";
-            Images[4] = Directory.GetCurrentDirectory() + @"/images/error4.PNG";
-            Images[5] = Directory.GetCurrentDirectory() + @"/images/error5.PNG";
-            Images[6] = Directory.GetCurrentDirectory() + @"/images/gameOver.PNG";
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
+            path = Directory.GetParent(path).FullName;
+
+            Images[0] = path + @"/Images/startGame.PNG";
+            Images[1] = path + @"/Images/error1.PNG";
+            Images[2] = path + @"/Images/error2.PNG";
+            Images[3] = path + @"/Images/error3.PNG";
+            Images[4] = path + @"/Images/error4.PNG";
+            Images[5] = path + @"/Images/error5.PNG";
+            Images[6] = path + @"/Images/gameOver.PNG";
         }
     }
 }
